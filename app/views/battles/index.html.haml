@@ -1,1 +1,12 @@
-=render 'panel'
+- content_for :head do
+  = render 'panel'
+
+.battles-albums
+  - favorites.each do |batch|
+    .albums-row
+      - batch.each do |url|
+        .item
+          .bg{style: "background-image: url(#{image_url 'cats/' + url})"}
+          .info
+            .name SpeedSculpt #46
+            .meta Vasya Pupkin - 1 place

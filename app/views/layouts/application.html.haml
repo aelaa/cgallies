@@ -47,9 +47,10 @@
             %li= link_to 'Выйти', api_session_path, method: :delete
           - else
             %li= link_to 'Войти', login_path
+    = yield :head
 
 
-    .container.main
+    .main
       = yield
 
     %footer

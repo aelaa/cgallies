@@ -22,6 +22,8 @@ module Auth
   end
 
   def current_admin
-    @current_admin ||= User.admins.find_by(id: session[:user])
+    @current_admin ||= @current_user&.admin? ?
+      @current_user :
+      User.admins.find_by(id: session[:user])
   end
 end
