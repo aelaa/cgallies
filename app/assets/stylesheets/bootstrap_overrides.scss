@@ -1,0 +1,154 @@
+//= require bootstrap.css
+
+body {
+  min-width: 1300px;
+  overflow-x: hidden;
+  background-color: #1c1c1c;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-default {
+  background-color: #333;
+  background-image: -webkit-linear-gradient(#222, #060606);
+  background-image: -o-linear-gradient(#222, #060606);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#222), to(#060606));
+  background-image: linear-gradient(#222, #060606);
+}
+
+footer {
+  position: fixed;
+  bottom: -30px;
+  width: 100vw;
+  background-color: #222;
+  border: 1px solid black;
+}
+
+.favorite-works {
+  height: 200px;
+}
+
+.navbar {
+  font-size: 20px;
+  user-select: none;
+}
+
+main {
+  top: 275px;
+  height: 2000px;
+}
+
+.show-page {
+  width: 100%;
+  background-color: #616161;
+  font-size: 16px;
+}
+
+.login-buttons {
+  font-size: 15px;
+  margin-right: 0;
+  top: 0;
+  position: absolute;
+  right: 0;
+}
+
+
+.nav.navbar-nav.menu {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+}
+
+.navbar-nav>.active>a {
+  background-color: black !important;
+}
+
+.navbar-nav>li.active>a:first-letter {
+  color: #ff2f34;
+}
+
+.modal-content {
+  background-color: #222;
+  border: solid 4px #aaa;
+}
+
+#work_form .form-wrap {
+  border-radius: 5px;
+  background-color: #333;
+  margin: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 10px;
+  color: white;
+}
+
+#work_form .form-wrap.submit {
+  padding: 0;
+}
+
+.work_form-description {
+  height: 150px;
+}
+
+.image {
+  border: 8px solid #333;
+  border-radius: 10px;
+  margin: 4px;
+}
+
+.image-loader {
+  height: 276px;
+  padding: 10px;
+  display: flex;
+}
+
+.image-loader>div {
+  flex-grow: 1;
+}
+
+.image-loader div:last {
+  display: flex;
+}
+
+.image-loader div:last div {
+  height: 100%;
+}
+
+.image-rows>div {
+  height: 50%;
+  display: flex;
+}
+
+.image-rows>div>div {
+  flex-grow: 1;
+}
+
+#work_form textarea {
+  font-size: 20px;
+  font-weight: normal;
+  background-color: #00000000;
+  border: none;
+  resize: none;
+  width: 100%;
+  color: white;
+  outline: none;
+}
+
+#work_form input[type=submit] {
+  border-radius: 5px;
+  text-transform: uppercase;
+  width: 100%;
+  background-color: #cc0066;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  font-weight: bold;
+}
