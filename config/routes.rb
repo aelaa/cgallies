@@ -1,19 +1,16 @@
 Rails.application.routes.draw do
-  get 'battles/index'
-
-  get 'battles/show'
+  get 'sessions/new'
 
   root to: 'static#main'
 
   get 'news' => 'static#news'
   get 'streams' => 'static#streams'
   get 'faq' => 'static#faq'
+  get 'login' => 'sessions#new'
+
   resources :battles, only: [:index, :show]
 
-  # get 'login' => 'sessions#new'
-
   # resources :users
-  # resource :session, except: [:edit, :update]
 
   # namespace :admin do
   #   root to: 'battles#index'
@@ -23,7 +20,8 @@ Rails.application.routes.draw do
   #   resources :battle_works
   # end
 
-  # namespace :api do
+  namespace :api do
+    resource :session, only: [:create, :destroy]
   #   resources :battle_works, only: :create
-  # end
+  end
 end

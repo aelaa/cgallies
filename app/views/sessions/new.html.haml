@@ -1,0 +1,12 @@
+= form_with url: api_session_path do |f|
+  - if defined? errors
+    #error_explanation
+      %ul
+        %li= errors
+
+  .field
+    = f.text_field :login, label: 'Логин'
+  .field
+    = f.password_field :password, label: 'Пароль'
+  .actions
+    = f.submit 'Войти'

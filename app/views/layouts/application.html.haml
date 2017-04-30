@@ -40,13 +40,13 @@
           %li#tutors= link_to 'Туторы', streams_path
           %li#faq= link_to 'FAQ', streams_path
         %ul.nav.navbar-nav.navbar-right.login-buttons
-          -# - if current_user
-          -#   - if current_admin
-          -#     %li= link_to 'Админка', admin_root_path, data: { turbolinks: false }
-          -#   %li= link_to 'Привет, ' + current_user.name.to_s, root_path
-          -#   %li= link_to 'Выйти', session_path, method: :delete
-          -# - else
-          -#   %li= link_to 'Войти', new_session_path
+          - if current_user
+            - if current_admin
+              -# %li= link_to 'Админка', admin_root_path, data: { turbolinks: false }
+            %li= link_to 'Привет, ' + current_user.name.to_s, root_path
+            %li= link_to 'Выйти', api_session_path, method: :delete
+          - else
+            %li= link_to 'Войти', login_path
 
 
     .container.main
