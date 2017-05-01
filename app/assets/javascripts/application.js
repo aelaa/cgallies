@@ -21,4 +21,23 @@ document.addEventListener("turbolinks:load", function() {
     $(".navbar-nav>li.active").removeClass("active");
     $(".navbar-nav>li#" + path).addClass("active");
   }
+  if (path != 'battles') {
+    $(".favorite-works").css("top", '0px');
+    window.onscroll = null;
+  } else {
+    var scrollPosition = document.body.scrollTop;
+
+    window.onscroll = function(){
+      var newScrollPosition = document.body.scrollTop,
+      delta = newScrollPosition - scrollPosition;
+      scrollPosition = document.body.scrollTop;
+
+      if (delta > 0) {
+        r = "+=" + delta / 2.8
+      } else {
+        r = "-=" + -delta / 2.8
+      }
+      $(".favorite-works").css("top", r + 'px');
+    }
+  }
 });
