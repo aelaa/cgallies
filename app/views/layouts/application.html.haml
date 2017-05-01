@@ -31,9 +31,8 @@
     .navbar.navbar-default.navbar-static-top
       .navbar-collapse.collapse.navbar-responsive-collapse.navbar-center
         %ul.nav.navbar-nav.menu
-          %li
-            %a.navbar-brand(href='#')
-              = image_tag image_path('logo.png'), height: 20
+          .navbar-brand(href='#')
+            = image_tag image_path('logo.png'), height: 20
           %li#news= link_to 'Новости', news_path
           %li#battles= link_to 'Баттлы', battles_path
           %li#streams= link_to 'Стримы', streams_path

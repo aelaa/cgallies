@@ -14,3 +14,11 @@
 //= require jquery/dist/jquery
 //= require turbolinks
 //= require_tree .
+
+document.addEventListener("turbolinks:load", function() {
+  path = document.URL.split('/')[3]
+  if (path) {
+    $(".navbar-nav>li.active").removeClass("active");
+    $(".navbar-nav>li#" + path).addClass("active");
+  }
+});

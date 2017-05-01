@@ -2,7 +2,7 @@
 
 body {
   min-width: 1300px;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   background-color: #1c1c1c;
 }
 
@@ -11,6 +11,8 @@ body {
   position: sticky;
   top: 0;
   margin-bottom: 0;
+  font-size: 20px;
+  user-select: none;
 }
 
 .navbar-default {
@@ -19,23 +21,6 @@ body {
   background-image: -o-linear-gradient(#222, #060606);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#222), to(#060606));
   background-image: linear-gradient(#222, #060606);
-}
-
-footer {
-  position: fixed;
-  bottom: -30px;
-  width: 100vw;
-  background-color: #222;
-  border: 1px solid black;
-}
-
-.favorite-works {
-  height: 200px;
-}
-
-.navbar {
-  font-size: 20px;
-  user-select: none;
 }
 
 main {
