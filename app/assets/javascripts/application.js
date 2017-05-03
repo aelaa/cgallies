@@ -25,19 +25,14 @@ document.addEventListener("turbolinks:load", function() {
     $(".favorite-works").css("top", '0px');
     window.onscroll = null;
   } else {
-    var scrollPosition = document.body.scrollTop;
+    var scrollPosition = window.scrollY;
 
     window.onscroll = function(){
-      var newScrollPosition = document.body.scrollTop,
-      delta = newScrollPosition - scrollPosition;
-      scrollPosition = document.body.scrollTop;
+      newScrollPosition = window.scrollY * 0.4;
+      scrollPosition = window.scrollY;
+      if (newScrollPosition > 85) newScrollPosition = 85;
 
-      if (delta > 0) {
-        r = "+=" + delta / 2.8
-      } else {
-        r = "-=" + -delta / 2.8
-      }
-      $(".favorite-works").css("top", r + 'px');
+      $(".favorite-works").css("top", newScrollPosition + 'px');
     }
   }
 });
