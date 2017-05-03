@@ -5,12 +5,16 @@
   to_scroll = $('.favorite-works').scrollLeft() + favoriteItemWidth() * 4
   shift = favoriteItemWidth() * Math.round(to_scroll / favoriteItemWidth())
   $('.favorite-works').stop().animate({ scrollLeft: shift }, "slow")
+  $('.favorite-works>.left').css('left', '+=50vw')
+  $('.favorite-works>.right').css('right', '-=50vw')
 
 @favoriteScrollLeft = () =>
   to_scroll = $('.favorite-works').scrollLeft() - favoriteItemWidth() * 4
   shift = favoriteItemWidth() * Math.round(to_scroll / favoriteItemWidth())
   if (shift >= 0)
     $('.favorite-works').stop().animate({ scrollLeft: shift }, "slow")
+  $('.favorite-works>.left').css('left', '-=50vw')
+  $('.favorite-works>.right').css('right', '+=50vw')
 
 $(document).ready(() =>
   $(window).resize(() =>
