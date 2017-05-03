@@ -133,6 +133,7 @@
 
     position: relative;
     cursor: default;
+    -moz-user-select: none;
     user-select: none;
   }
 

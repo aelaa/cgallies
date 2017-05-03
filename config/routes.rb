@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   root to: 'static#main'
 
-  get 'news' => 'static#news'
   get 'streams' => 'static#streams'
   get 'faq' => 'static#faq'
   get 'login' => 'sessions#new'
