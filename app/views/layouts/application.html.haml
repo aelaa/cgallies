@@ -32,7 +32,10 @@
       .navbar-collapse.collapse.navbar-responsive-collapse.navbar-center
         %ul.nav.navbar-nav.menu
           .navbar-brand(href='#')
-            = image_tag image_path('logo.png'), height: 20
+            - if content_for :logo
+              = content_for :logo
+            - else
+              = image_tag image_path('logo.png')
           %li#battles= link_to 'Баттлы', battles_path
           %li#streams= link_to 'Стримы', streams_path
           %li#tutors= link_to 'Туторы', streams_path
