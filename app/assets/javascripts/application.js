@@ -15,24 +15,36 @@
 //= require turbolinks
 //= require_tree .
 
+document.addEventListener("turbolinks:before-render", function() {
+  path = document.URL.split('/')[3]
+  if (path == 'battles') {
+  }
+}
+
 document.addEventListener("turbolinks:load", function() {
   path = document.URL.split('/')[3]
   if (path) {
     $(".navbar-nav>li.active").removeClass("active");
     $(".navbar-nav>li#" + path).addClass("active");
   }
-  if (path != 'battles') {
-    $(".favorite-works").css("top", '0px');
-    window.onscroll = null;
+  if (path == 'battles') {
+
+    $(document).ready(function() {
+      $("html, body").animate({ scrollTop: 230 }, 500, function (x, t, b, c, d) {
+        if ((t/=d/2) < 1) return c/2*t*t*t + b;
+        return c/2*((t-=2)*t*t + 2) + b;})}
+    );
   } else {
-    var scrollPosition = window.scrollY;
-
-    window.onscroll = function(){
-      newScrollPosition = window.scrollY * 0.4;
-      scrollPosition = window.scrollY;
-      if (newScrollPosition > 85) newScrollPosition = 85;
-
-      $(".favorite-works").css("top", newScrollPosition + 'px');
-    }
+    // $(".favorite-works").css("top", '0px');
   }
 });
+
+var scrollPosition = window.scrollY;
+
+window.onscroll = function(){
+  newScrollPosition = window.scrollY * 0.4;
+  scrollPosition = window.scrollY;
+  if (newScrollPosition > 85) newScrollPosition = 85;
+
+  $(".favorite-works").css("top", newScrollPosition + 'px');
+}

@@ -23,9 +23,3 @@
           .info
             .name SpeedSculpt #46
             .meta Vasya Pupkin - 1 place
-
-:javascript
-  $(document).ready(function() {
-    $("html, body").animate({ scrollTop: 230 }, 500, function (x, t, b, c, d) {
-    if ((t/=d/2) < 1) return c/2*t*t*t + b;
-      return c/2*((t-=2)*t*t + 2) + b;})})
