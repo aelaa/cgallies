@@ -1,5 +1,10 @@
-- content_for :head do
-  = render 'panel'
+- content_for :panel do
+  .item.active Все
+  .item Текущие
+  .item СпидCкульпты
+  .item ЛонгБаттлы
+  .item КлейБаттлы
+  .item ФанЧелленджи
 
 .section-row
   - favorites.first.first(4).each do |url|
