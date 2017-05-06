@@ -21,9 +21,9 @@
         %span <
       .favorite-nav.right(onclick='favoriteScrollRight()')
         %span >
-      - favorites.flatten.each_with_index do |url, index|
+      - (1..8).each do |index|
         .item
-          .bg{style: "background-image: url(#{image_url 'cats/' + url})"}
+          .bg{style: "background-image: url(#{image_url "favorites/#{index}.jpg"})"}
           .info
             .name SpeedSculpt #46
             .meta Vasya Pupkin - 1 place
