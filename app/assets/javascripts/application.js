@@ -19,7 +19,7 @@ document.addEventListener("turbolinks:before-render", function() {
   path = document.URL.split('/')[3]
   if (path == 'battles') {
   }
-}
+})
 
 document.addEventListener("turbolinks:load", function() {
   path = document.URL.split('/')[3]
