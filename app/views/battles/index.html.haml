@@ -7,9 +7,9 @@
   .item ФанЧелленджи
 
 .section-row
-  - favorites.first.first(4).each do |url|
+  - (1..4).each do |index|
     .item
-      .bg{style: "background-image: url(#{image_url 'cats/' + url})"}
+      .bg{style: "background-image: url(#{image_url 'current/' + index.to_s + '.jpg'})"}
       .info
         .name SpeedSculpt #46
         .meta Vasya Pupkin - 1 place
