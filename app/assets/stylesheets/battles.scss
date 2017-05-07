@@ -70,6 +70,15 @@
     display: flex;
     padding: 0 25px;
     justify-content: space-between;
+    text-shadow: 0 0 10px black, 0 0 10px black;
+
+    &:last-child {
+      justify-content: flex-start;
+
+      .item {
+        margin-right: 25px;
+      }
+    }
 
     .item {
       -moz-user-select: none;
@@ -84,38 +93,33 @@
       position: relative;
       color:white;
 
-      .hover {
-        font-family: 'MVideo';
-        text-transform: uppercase;
+      .hover-background {
         display: none;
+        position: absolute;
+
+        background-color:black;
+        opacity: 0.7;
         width: 100%;
         height: 100%;
+      }
 
-        .hover-background {
-          position: absolute;
+      .hover-info {
+        text-transform: uppercase;
+        font-family: 'MVideo';
+        position: relative;
+        text-align: center;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        flex-direction: column;
+        line-height: 1;
 
-          background-color:black;
-          opacity: 0.7;
-          width: 100%;
-          height: 100%;
+        .name {
+          font-size: 30px;
         }
 
-        .hover-info {
-          position: relative;
-          text-align: center;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          line-height: 1;
-
-          .name {
-            font-size: 30px;
-          }
-
-          .date {
-            font-size: 27px;
-          }
+        .date {
+          font-size: 27px;
         }
       }
 
@@ -128,7 +132,6 @@
         height: 22px;
         font-size: 13px;
         padding: 3px;
-        text-shadow: 0 0 10px black, 0 0 10px black;
 
         .number {
           float: right;
@@ -138,8 +141,12 @@
       }
 
       &:hover {
-        .hover {
+        .hover-background {
           display: block;
+        }
+
+        .hover-info {
+          display: flex;
         }
       }
     }
