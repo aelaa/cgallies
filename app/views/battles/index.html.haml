@@ -8,11 +8,14 @@
 
 .section-row
   - (1..4).each do |index|
-    .item
-      .bg{style: "background-image: url(#{image_url 'current/' + index.to_s + '.jpg'})"}
-      .info
-        .name SpeedSculpt #46
-        .meta Vasya Pupkin - 1 place
+    .item{style: "background-image: url(#{image_url 'current/' + index.to_s + '.jpg'})"}
+      .info{class: "#{'white' if index == 4}"}
+        %p.current Текущий
+        %p.name CLAY BATTLE
+        %p.date
+          состоится
+          %span.red 20.05
+          в 18:00
 
 .battles-albums
   - favorites.each do |batch|

@@ -8,56 +8,49 @@
   display: flex;
   justify-content: space-around;
   height: 16vw;
+  cursor: default;
+  user-select: none;
+  color: rgba(255,255,255,1);
 
   .item {
     -moz-user-select: none;
     user-select: none;
     width: 22vw;
     height: 16vw;
-
-    .bg {
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
     .info {
-      bottom: 100px;
-      position: relative;
-      padding-left: 10px;
-      padding-top: 30px;
-      margin-bottom: 0;
-      height: 100px;
-      color: rgba(255,255,255,1);
-      cursor: default;
-      user-select: none;
-      font-size: 10px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 0.8;
 
-      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
-      .name {
-        font-size: 20px;
-        margin-top: 15px;
+      .current {
+        text-transform: uppercase;
+        font-size: 30px;
       }
 
-      p.meta {
-        color: rgba(255,255,255,1);
-        cursor: default;
-        font-size: 12px;
+      .name {
+        font-size: 45px;
+      }
 
-        position: relative;
-        cursor: default;
-        user-select: none;
+      .date {
+        font-size: 20px;
 
+        .red {
+          color: #ff2f34;
+        }
       }
     }
 
+    .white {
+      color: black;
+    }
   }
 }
 
