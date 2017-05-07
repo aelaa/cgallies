@@ -33,7 +33,7 @@
     .info {
       text-align: center;
       line-height: 1;
-      text-shadow: 0 0 10px black;
+      text-shadow: 0 0 10px black, 0 0 10px black;
 
 
       .current {
@@ -58,7 +58,7 @@
 
     .white {
       color: black;
-      text-shadow: 0 0 5px white;
+      text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
     }
   }
 }
