@@ -16,12 +16,12 @@
 
 @font-face {
   font-family: 'MVideo';
-  src: url('/assets/M_Video_Bold.ttf');
+  src: url('/fonts/M_Video_Bold.ttf');
 }
 
 @font-face {
   font-family: 'Keep Calm';
-  src: url('/assets/KeepCalm-Medium_0.ttf');
+  src: url('/fonts/KeepCalm-Medium_0.ttf');
 }
 
 body {
