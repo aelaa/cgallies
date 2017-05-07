@@ -15,8 +15,13 @@
  */
 
 @font-face {
-  font-family: 'M.Video';
+  font-family: 'MVideo';
   src: url('/assets/M_Video_Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Keep Calm';
+  src: url('/assets/KeepCalm-Medium_0.ttf');
 }
 
 body {

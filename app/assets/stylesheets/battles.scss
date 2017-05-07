@@ -11,7 +11,7 @@
   cursor: default;
   user-select: none;
   color: rgba(255,255,255,1);
-  font-family: 'M.Video', sans-serif;
+  font-family: 'MVideo';
 
   .item {
     -moz-user-select: none;
@@ -24,13 +24,15 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    border: solid 1px #242424;
     box-shadow: 0 0 50px 0px black;
+
+    p {
+      margin: 0;
+    }
 
     .info {
       text-align: center;
-      font-weight: bold;
-      line-height: 0.8;
+      line-height: 1;
       text-shadow: 0 0 10px black;
 
 
@@ -40,6 +42,8 @@
       }
 
       .name {
+        padding-top: 10px;
+        font-family: 'Keep Calm';
         font-size: 45px;
       }
 
