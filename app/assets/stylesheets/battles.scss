@@ -24,6 +24,8 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border: solid 1px #242424;
+    box-shadow: 0 0 50px 0px black;
 
     .info {
       text-align: center;
