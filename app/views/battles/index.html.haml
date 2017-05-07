@@ -8,14 +8,24 @@
 
 .section-row
   - (1..4).each do |index|
-    .item{style: "background-image: url(#{image_url 'current/' + index.to_s + '.jpg'})"}
-      .info{class: "#{'white' if index == 4}"}
-        %p.current Текущий
-        %p.name CLAY BATTLE
-        %p.date
-          состоится
-          %span.red 20.05
-          в 18:00
+    - if index < 3
+      .item{style: "background-image: url(#{image_url 'current/' + index.to_s + '.jpg'})"}
+        .info{class: "#{'white' if index == 4}"}
+          %p.current Текущий
+          %p.name LONG BATTLE
+          %p.date
+            до
+            %span.red окончания
+            осталось
+    - else
+      .item{style: "background-image: url(#{image_url 'current/' + index.to_s + '.jpg'})"}
+        .info{class: "#{'white' if index == 4}"}
+          %p.current Следующий
+          %p.name CLAY BATTLE
+          %p.date
+            состоится
+            %span.red 20.05
+            в 18:00
 
 .battles-albums
   - favorites.each do |batch|
