@@ -31,7 +31,7 @@
   - (19..110).to_a.in_groups_of(5).each do |batch|
     .albums-row
       - batch.compact.each do |url|
-        .item{style: "background-image: url(#{image_url "albums/#{url}"})"}
+        .item{style: "background-image: url(#{image_url "albums/#{url}.png"})"}
           .info
             Speed sculpt
             %span.number #55
