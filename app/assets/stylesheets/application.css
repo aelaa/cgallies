@@ -14,9 +14,15 @@
  *= require_self
  */
 
+@font-face {
+  font-family: 'M.Video';
+  src: url('/assets/M_Video_Bold.ttf');
+}
+
 body {
   font-family: 'Rubik', sans-serif;
 }
+
 
 .turbolinks-progress-bar {
   background-color: #f1232d !important;
