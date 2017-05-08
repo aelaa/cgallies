@@ -1,4 +1,28 @@
+- content_for :panel do
+  .item.active Все
+  .item 3DS Max
+  .item ZBrush
+  .item Blender
+  .item XNormal
+  .item UV Lay Out
+  .item Maya
+  .item Photoshop
+
 - content_for :logo do
   = image_tag image_path('logo_violet.png')
-%h1 Static#streams
-%p Find me in app/views/static/streams.html.haml
+
+.streams-main
+  - 9.times do
+    .row
+      - (1..3).each do |index|
+        .item
+          .bg{style: "background-image: url(#{image_url 'current/' + index.to_s + '.jpg'})"}
+            .hover-background
+            .hover-info
+              %p
+                %span= image_tag 'play', class: 'play'
+                %span.duration 04:30:45
+          .info
+            .name Making of Lucilla
+            .author Вадим Бахлычев
+
