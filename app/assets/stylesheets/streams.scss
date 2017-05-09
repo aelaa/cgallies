@@ -5,10 +5,14 @@
     width: 100%;
     margin: 35px auto;
 
+    &:before, &:after {
+      content: none;
+    }
+
     .item {
       -moz-user-select: none;
       user-select: none;
-      width: 30vw;
+      width: 31vw;
       display: flex;
       justify-content: center;
       flex-direction: column;
