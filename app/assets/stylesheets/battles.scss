@@ -7,15 +7,15 @@
 }
 
 .section-row {
-  margin: 30px auto 60px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 16vw;
   cursor: default;
   user-select: none;
   color: rgba(255,255,255,1);
   font-family: 'MVideo';
+  margin-bottom: 40px;
 
   .item {
     -moz-user-select: none;
@@ -66,9 +66,8 @@
 .battles-albums {
   .albums-row {
     width: 100%;
-    margin-top: 25px;
+    margin-top: 20px;
     display: flex;
-    padding: 0 25px;
     justify-content: space-between;
     text-shadow: 0 0 10px black, 0 0 10px black;
 
