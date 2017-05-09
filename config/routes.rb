@@ -11,16 +11,17 @@ Rails.application.routes.draw do
 
   # resources :users
 
-  # namespace :admin do
-  #   root to: 'battles#index'
+  namespace :admin do
+    root to: 'battles#index'
 
-  #   resources :battles
-  #   resources :news_articles, path: :news
-  #   resources :battle_works
-  # end
+    resources :battles do
+      resources :battle_works
+    end
+  end
 
   namespace :api do
     resource :session, only: [:create, :destroy]
   #   resources :battle_works, only: :create
   end
+
 end

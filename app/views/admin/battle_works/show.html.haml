@@ -1,0 +1,11 @@
+%p
+  %b Обложка:
+  = image_tag battle_work.cover.try(:url)
+%p
+  %b author:
+  = battle_work.author
+%p
+  %b description:
+  = battle_work.description
+
+= link_to 'Изменить', edit_admin_battle_battle_work_path(battle, battle_work)

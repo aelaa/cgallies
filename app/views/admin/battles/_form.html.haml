@@ -1,0 +1,25 @@
+= form_for [:admin, battle] do |f|
+  - if battle.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(battle.errors.count, "error")} prohibited this admin_battle from being saved:"
+      %ul
+        - battle.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :cover, class: 'control-label'
+    = f.file_field :cover
+  .form-group
+    = f.label :name, class: 'control-label'
+    = f.text_field :name, label: 'Имя', class: 'form-control'
+  .form-group
+    = f.label :battle_type, class: 'control-label'
+    = f.select :battle_type, Battle::TYPES, {},  { class: 'form-control' }
+  .form-group
+    = f.label :start_at, class: 'control-label'
+    = f.datetime_field :start_at
+  .form-group
+    = f.label :finish_at, class: 'control-label'
+    = f.datetime_field :finish_at
+  .actions
+    = f.submit 'Сохранить'

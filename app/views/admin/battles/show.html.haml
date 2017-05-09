@@ -1,0 +1,17 @@
+%p
+  %b Обложка:
+  = image_tag battle.cover.try(:url)
+%p
+  %b Имя:
+  = battle.name
+%p
+  %b Type:
+  = battle.battle_type
+%p
+  %b Дата начала:
+  = battle.start_at
+%p
+  %b Дата окончания:
+  = battle.finish_at
+
+= link_to 'Изменить', edit_admin_battle_path(battle)
