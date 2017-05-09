@@ -9,6 +9,10 @@
       content: none;
     }
 
+    &:first-child {
+      margin-top: 0;
+    }
+
     .item {
       -moz-user-select: none;
       user-select: none;
